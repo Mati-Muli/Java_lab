@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AppController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #f4f4f4;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../pwr.png" />
+                    </image>
+                </ImageView>
+                <Pane HBox.hgrow="ALWAYS" />
+                <Label text="Edytor obrazów">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="30.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Oryginalny obraz" textFill="#666666" />
+                        <ImageView fx:id="originalImageView" fitHeight="350.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Przetworzony obraz" textFill="#666666" />
+                        <ImageView fx:id="processedImageView" fitHeight="350.0" fitWidth="380.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #f4f4f4;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="rotateLeft" mnemonicParsing="false" text="Obrót Lewo (&lt;-)" />
+                        <Button fx:id="execute" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Wykonaj" />
+                        <Button fx:id="rotateRight" mnemonicParsing="false" text="Obrót Prawo (-&gt;)" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="load" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Wczytaj" />
+                        <ChoiceBox fx:id="operationChoiceBox" prefWidth="180.0" />
+                        <Button fx:id="save" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Zapisz" />
+                    </children>
+                </HBox>
+
+                <Label text="Mateusz Mulewicz 280073" textFill="#888888">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>
