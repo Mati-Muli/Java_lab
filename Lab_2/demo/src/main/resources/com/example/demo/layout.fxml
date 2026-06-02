@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="551.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AppController">
+    <children>
+        <ChoiceBox fx:id="operationChoiceBox" layoutX="337.0" layoutY="486.0" prefWidth="150.0" />
+        <Button fx:id="load" layoutX="246.0" layoutY="486.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Wczytaj" />
+        <Button fx:id="save" layoutX="497.0" layoutY="486.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Zapisz" />
+
+        <Button fx:id="execute" layoutX="370.0" layoutY="450.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Wykonaj" />
+        <Button fx:id="rotateLeft" layoutX="230.0" layoutY="450.0" mnemonicParsing="false" text="Obrót Lewo (⟲)" />
+        <Button fx:id="rotateRight" layoutX="497.0" layoutY="450.0" mnemonicParsing="false" text="Obrót Prawo (⟳)" />
+        <ImageView fx:id="originalImageView" fitHeight="323.0" fitWidth="347.0" layoutX="24.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="processedImageView" fitHeight="323.0" fitWidth="347.0" layoutX="466.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" />
+
+        <Label layoutX="342.0" layoutY="520.0" prefHeight="17.0" prefWidth="141.0" text="Mateusz Mulewicz 280073" />
+
+        <ImageView fitHeight="77.0" fitWidth="481.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../pwr.png" />
+            </image>
+        </ImageView>
+
+        <Label layoutX="360.0" layoutY="35.0" text="Edytor Obrazów PWr">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
