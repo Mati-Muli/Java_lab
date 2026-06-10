@@ -55,6 +55,7 @@ public class AppController {
             setControlsDisabled(false);
             operationChoiceBox.getSelectionModel().selectFirst();
             Toast.show(getWindow(), "Wczytano plik");
+            Log.log("INFO","Wczytano plik");
         }
     }
 
@@ -62,36 +63,34 @@ public class AppController {
         if (currentImage == null || operationChoiceBox.getValue() == null) return;
         String op = operationChoiceBox.getValue();
 
-        try {
-            switch (op) {
-                case "Skalowanie":
-                    Show.scaleModal(processedImageView, getWindow());
-                    break;
-                case "Progowanie":
-                    Show.thresholdModal(processedImageView, this, getWindow());
-                    break;
-                case "Konturowanie":
-                    processedImageView.setImage(Filter.applyContouring(processedImageView.getImage()));
-                    isImageProcessed = true;
-                    Toast.show(getWindow(), "Konturowanie pomyślne!");
-                    break;
-                case "Negatyw":
-                    processedImageView.setImage(Filter.applyNegative(processedImageView.getImage()));
-                    isImageProcessed = true;
-                    Toast.show(getWindow(), "Operacja Negatyw zakończona.");
-                    break;
-                case "Skala szarości":
-                    processedImageView.setImage(Filter.applyGrayscale(processedImageView.getImage()));
-                    isImageProcessed = true;
-                    Toast.show(getWindow(), "Operacja Skala szarości zakończona.");
-                    break;
-            }
-        } catch (Exception ex) {
-            Toast.show(getWindow(), op.equals("Konturowanie") ? "Nie udało się wykonać konturowania." : "Operacja nieudana.");
+        switch (op) {
+            case "Skalowanie":
+                Show.scaleModal(processedImageView, getWindow());
+                Log.log("OPERATION", "Wykonano skalowanie");
+                break;
+            case "Progowanie":
+                Show.thresholdModal(processedImageView, this, getWindow());
+                Log.log("OPERATION", "Wykonano progowanie");
+                break;
+            case "Konturowanie":
+                processedImageView.setImage(Filter.applyContouring(processedImageView.getImage()));
+                isImageProcessed = true;
+                Log.log("OPERATION", "Wykonano konturowanie");
+                break;
+            case "Negatyw":
+                processedImageView.setImage(Filter.applyNegative(processedImageView.getImage()));
+                isImageProcessed = true;
+                Log.log("OPERATION", "Wykonano negatyw");
+                break;
+            case "Skala szarości":
+                processedImageView.setImage(Filter.applyGrayscale(processedImageView.getImage()));
+                isImageProcessed = true;
+                Log.log("OPERATION", "Wykonano konwersję na skalę szarości");
+                break;
         }
     }
-
-    private void handleRotation(int angle) {
+        private void handleRotation(int angle) {
         processedImageView.setImage(Transform.rotate(processedImageView.getImage(), angle));
+        Log.log("OPERATION", "Obrócono obraz");
     }
 }

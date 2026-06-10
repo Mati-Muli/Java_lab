@@ -15,8 +15,13 @@ public class MainApp extends Application {
         stage.setTitle("Edytor Obrazów");
         stage.setScene(scene);
         stage.show();
+        Log.log("INFO", "Uruchomiono aplikację");
     }
-
+    @Override
+    public void stop() throws Exception {
+        Log.log("INFO", "Zamknięto aplikację");
+        super.stop();
+    }
     public static void main(String[] args) {
         launch();
     }

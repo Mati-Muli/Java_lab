@@ -1,0 +1,18 @@
+[2026-06-10 13:46:54] [INFO] uruchomienie aplikacji
+[2026-06-10 13:47:03] [INFO] Wczytano plik
+[2026-06-10 13:47:05] [OPERATION] Wykonano konwersję na skalę szarości
+[2026-06-10 13:47:09] [OPERATION] Wykonano negatyw
+[2026-06-10 13:49:18] [INFO] uruchomienie aplikacji
+[2026-06-10 13:49:19] [INFO] zamknięcie aplikacji
+[2026-06-10 13:58:20] [INFO] uruchomienie aplikacji
+[2026-06-10 13:58:25] [INFO] Wczytano plik
+[2026-06-10 13:58:27] [OPERATION] Wykonano negatyw
+[2026-06-10 13:58:31] [OPERATION] Wykonano progowanie
+[2026-06-10 13:58:37] [OPERATION] Wykonano skalowanie
+[2026-06-10 14:00:06] [INFO] uruchomienie aplikacji
+[2026-06-10 14:00:25] [INFO] Wczytano plik
+[2026-06-10 14:00:32] [OPERATION] Obrócono obraz
+[2026-06-10 14:00:43] [OPERATION] Wykonano skalowanie
+[2026-06-10 14:00:56] [OPERATION] Obrócono obraz
+[2026-06-10 14:01:02] [OPERATION] Zapisano plik
+[2026-06-10 14:01:09] [INFO] zamknięcie aplikacji

@@ -28,5 +28,6 @@ public class Load {
         g.drawImage(b, 0, 0, null);
         g.dispose();
         ImageIO.write(rgb, "jpg", file);
+        Log.log("OPERATION", "Zapisano plik");
     }
 }
